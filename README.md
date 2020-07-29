@@ -1,4 +1,4 @@
-# landing-page
+# Foodies
 
 ## Project setup
 ```
