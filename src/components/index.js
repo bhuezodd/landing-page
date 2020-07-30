@@ -1,14 +1,37 @@
 import Vue from 'vue'
 
 // Register component
-function registerComponent(name) {
-    Vue.component(name, () => import(`./${name}.vue`))
+function registerComponent(name, url) {
+  Vue.component(name, () => import(`./${url}/${name}.vue`))
 }
 // Name components
 const nameComponents = [
-    'navbar'
-];
+  {
+    url: 'components',
+    childrens: [
+      'navbar', 'badge', 'burger', 'svg-top', 'img-one', 'line-twist'
+    ]
+  },
+  {
+    url: 'icons',
+    childrens: [
+      'arrow',
+      'takeaway',
+      'devilery',
+      'search'
+    ]
+  },
+  {
+    url: 'landings',
+    childrens: [
+      'v-header', 'v-about', 'v-restaurant',
+    ]
+  }
+]
 // Register
 nameComponents.forEach(value => {
-    registerComponent(value)
+  const { url, childrens } = value;
+  childrens.forEach((name) => {
+    registerComponent(name, url)
+  })
 })

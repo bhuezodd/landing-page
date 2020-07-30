@@ -1,6 +1,14 @@
 <template>
-  <div class="home">
-    <div class="bg-gray-200 w-full h-32 text-yellow">adios</div>
+  <div>
+    <section id="top">
+      <v-header></v-header>
+    </section>
+    <section id="about" class="pt-24">
+      <v-about></v-about>
+    </section>
+    <section id="restaurant">
+      <v-restaurant></v-restaurant>
+    </section>
   </div>
 </template>
 
