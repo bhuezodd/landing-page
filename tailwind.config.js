@@ -5,6 +5,10 @@ module.exports = {
   },
   variants: {},
   plugins: [],
+
+  fontFamily: {
+    'sans': ["noto"],
+  },
   textColor: {
     'black': '#000000',
     'white': '#FFFFFF',
