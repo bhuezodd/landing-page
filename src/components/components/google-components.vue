@@ -1,5 +1,6 @@
 <template>
-  <GoogleMapLoader :mapConfig="mapConfig">
+  <div></div>
+  <!-- <GoogleMapLoader :mapConfig="mapConfig">
     // insert your google maps api key to render styled map
     <template slot-scope="{ google, map }">
       <GoogleMapMarker
@@ -17,7 +18,7 @@
         :map="map"
       />
     </template>
-  </GoogleMapLoader>
+  </GoogleMapLoader>-->
 </template>
 <script>
 import { mapSettings } from "@/constants/mapSettings";

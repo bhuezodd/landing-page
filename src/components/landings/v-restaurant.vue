@@ -13,16 +13,16 @@
       <div class="flex flex-wrap">
         <div class="w-full mt-4 flex">
           <div class="btn border active">
-            <takeaway color="white" />
+            <v-icon icon="takeaway" color="white" />
             <span class="px-2">Para llevar</span>
           </div>
           <div class="btn border">
-            <devilery />
+            <v-icon icon="delivery" color="black" />
             <span class="px-2">Domicilio</span>
           </div>
         </div>
         <div class="w-full h-16 border flex justify-center items-center">
-          <search />
+          <img src="@/assets/img/icons/search.svg" alt />
           <input
             type="text"
             class="w-8/12 h-full font-sans text-xl px-2 focus:outline-none"
@@ -90,3 +90,10 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.change-my-color {
+  color: green;
+  fill: green;
+}
+</style>

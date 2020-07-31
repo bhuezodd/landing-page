@@ -1,11 +1,14 @@
 <template>
   <div class="h-screen px-32 relative">
+    <div class="svg">
+      <img src="@/assets/img/svgs/svg-top.svg" />
+    </div>
     <div class="flex w-full w-full items-center">
       <!-- Title -->
       <div class="title xl:w-5/12 lg:w-5/12 md::w-7/12 sm:w-full">
         <div
           class="font-title text-title leading-tight animation"
-          v-show="$route.hash == '' || getScroll < getHeight -100"
+          v-show="getScroll < getHeight -100"
         >
           <div class="child">Un nuevo sabor esta en</div>
           <div class="child bg-yellow lg:w-8/12">la ciudad</div>
@@ -15,18 +18,17 @@
         >Estamos a punto de descubrir un mundo lleno de sabores y de emociones inigualables.</p>
         <a href="#local" class="text-3xl flex items-center link-hover w-56">
           <span class="pr-2">Encuentranos</span>
-          <arrow class="w-8" />
+          <img src="@/assets/img/icons/arrow.svg" />
         </a>
       </div>
       <!-- burger -->
       <div v-show=" getScroll < getHeight -100" class="burger animation">
         <div class="obj">
-          <burger />
+          <img src="@/assets/img/images/burger1.png" alt />
         </div>
       </div>
     </div>
     <!-- SVG yellow -->
-    <svg-top></svg-top>
   </div>
 </template>
 
@@ -39,7 +41,6 @@ export default {
   },
 };
 </script>
-
 <style lang="scss" scoped>
 .title {
   position: absolute;
@@ -52,5 +53,11 @@ export default {
   right: 10vw;
   top: 45%;
   transform: translate(-10%, -55%);
+}
+.svg {
+  position: absolute;
+  right: 0;
+  top: 45%;
+  transform: translate(0, -55%);
 }
 </style>

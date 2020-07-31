@@ -1,19 +1,19 @@
 <template>
   <div class="flex">
-    <div class="relative w-7/12">
+    <div class="relative w-6/12">
       <!-- Title -->
-      <div class="title move-title p-3">
+      <div class="title move-title pr-6 pb-16">
         <div
-          class="font-title text-4xl leading-tight animation uppercase"
-          v-show="getScroll > getHeight / 2 && getScroll < getHeight * 2"
+          class="font-title leading-tight text-5xl text-right animation uppercase"
+          v-show="getScroll > getHeight / 2 && getScroll < getHeight + getHeight -200"
         >
           <div class="child text-white">La comida es</div>
           <div class="child text-yellow">nuestro Arte</div>
         </div>
       </div>
-      <img-one />
+      <img class="w-full" src="@/assets/img/images/picture.png" alt />
     </div>
-    <div class="relative w-5/12 flex items-center justify-start overflow-hidden">
+    <div class="relative w-6/12 flex items-center justify-start overflow-hidden">
       <div class="absolute z-10 px-16">
         <span class="font-title text-2xl">¿Quién es Foodies</span>
         <p class="mt-6 mb-10 text-gray-100 text-xl leading-tight">
@@ -24,10 +24,10 @@
         </p>
         <a href="#local" class="text-3xl flex items-center link-hover w-56">
           <span class="pr-2">Contáctanos</span>
-          <arrow class="w-8" />
+          <img src="@/assets/img/icons/arrow.svg" />
         </a>
       </div>
-      <line-twist />
+      <img src="@/assets/img/svgs/line-twist.svg" />
     </div>
   </div>
 </template>

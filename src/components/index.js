@@ -9,22 +9,27 @@ const nameComponents = [
   {
     url: 'components',
     childrens: [
-      'navbar', 'badge', 'burger', 'svg-top', 'img-one', 'line-twist', 'card-location', 'google-components', 'GoogleMapLine', 'GoogleMapLoader', 'GoogleMapMarker'
-    ]
-  },
-  {
-    url: 'icons',
-    childrens: [
-      'arrow',
-      'takeaway',
-      'devilery',
-      'search'
+      'navbar',
+      'badge',
+      'card-location',
+      'google-components',
+      'GoogleMapLine',
+      'GoogleMapLoader',
+      'GoogleMapMarker',
+      'card-app',
+      'v-icon'
     ]
   },
   {
     url: 'landings',
     childrens: [
-      'v-header', 'v-about', 'v-restaurant',
+      'v-header',
+      'v-about',
+      'v-restaurant',
+      'v-testimonials',
+      'v-contact',
+      'v-info',
+      'v-footer',
     ]
   }
 ]

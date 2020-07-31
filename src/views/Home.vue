@@ -9,6 +9,15 @@
     <section id="restaurant">
       <v-restaurant></v-restaurant>
     </section>
+    <section id="testimonials">
+      <v-testimonials></v-testimonials>
+    </section>
+    <section id="contact">
+      <v-contact></v-contact>
+    </section>
+    <section id="info">
+      <v-info></v-info>
+    </section>
   </div>
 </template>
 
