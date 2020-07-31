@@ -1,10 +1,7 @@
 <template>
   <div class="w-full bg-black text-white py-32 flex flex-wrap justify-center">
     <div class="w-7/12 text-center flex flex-wrap justify-center">
-      <div
-        class="w-10/12 text-center animation"
-        v-show="getScroll > getHeight * 3 && getScroll < getHeight * 4"
-      >
+      <div class="w-10/12 text-center animation" v-show="getScroll > getHeight * 3">
         <p class="child font-title text-4xl">Cuentanos tu experiencia</p>
         <p
           class="child font-sans text-3xl"

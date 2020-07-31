@@ -1,5 +1,5 @@
 <template>
-  <span class="bg-yellow px-2">{{ text }}</span>
+  <span class="bg-yellow py-1 px-2 rounded font-title">{{ text }}</span>
 </template>
 
 <script>

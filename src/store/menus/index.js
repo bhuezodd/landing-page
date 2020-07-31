@@ -4,6 +4,9 @@ import mutations from './mutations';
 
 
 const state = {
+    loading: false,
+    menu: [],
+    categories: []
 }
 
 export default {

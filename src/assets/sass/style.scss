@@ -42,64 +42,6 @@ color: $colors !important;
   }
 }
 
-.animation {
-  .child:nth-child(1) {
-    animation: anima-right 1s;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-  }
-  .child:nth-child(2) {
-    animation: anima-left 1s;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-  }
-  .obj:nth-child(1){
-    animation: anima-top 1s;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes anima-top {
-  0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes anima-right {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes anima-left {
-  0% {
-    -webkit-transform: translateX(50%);
-    transform: translateX(50%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 
 // And from the left
 .slide:hover,
@@ -108,7 +50,7 @@ color: $colors !important;
 }
 
 
-button {
+.slide {
   background: none;
   border: 1px solid;
   font: inherit;
@@ -124,5 +66,72 @@ button {
     border-color: $colors;
     color: #000;
     outline: none;
+  }
+}
+
+
+// Animation text
+ .animation-text {
+   transform: translateY(100px);
+   animation: 1.2s slideIn ease-in-out forwards 0.2s;
+   z-index: 10;
+   opacity: 0;
+   position: relative;
+ 
+   &::before {
+       content: '';
+       width: 0%;
+       height: 76px;
+       position: absolute;
+       bottom: -10px;
+       animation: 1s underline ease-in-out forwards 0.4s;
+       mix-blend-mode: screen;
+   }
+ }
+ // Animation text
+  .animation {
+    transform: translateX(100px);
+    animation: 1.2s slideIn ease-in-out forwards 0.2s;
+    z-index: 10;
+    opacity: 0;
+    position: relative;
+  
+    &::before {
+        content: '';
+        width: 0%;
+        height: 76px;
+        position: absolute;
+        bottom: -10px;
+        animation: 1s underline ease-in-out forwards 0.4s;
+        mix-blend-mode: screen;
+    }
+  }
+
+@keyframes skewBg {
+  0% {
+    transform: scale(.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes underline {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes slideOn {
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }

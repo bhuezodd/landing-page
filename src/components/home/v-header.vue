@@ -5,7 +5,7 @@
     </div>
     <div class="flex w-full w-full items-center">
       <!-- Title -->
-      <div class="title xl:w-5/12 lg:w-5/12 md::w-7/12 sm:w-full">
+      <div class="title xl:w-6/12 lg:w-6/12 md::w-7/12 sm:w-full lg:px-4">
         <div
           class="font-title text-title leading-tight animation"
           v-show="getScroll < getHeight -100"
@@ -17,7 +17,7 @@
           class="font-sans text-sub-text w-9/12 text-gray-100 leading-tight mt-4 mb-24"
         >Estamos a punto de descubrir un mundo lleno de sabores y de emociones inigualables.</p>
         <a href="#local" class="text-3xl flex items-center link-hover w-56">
-          <span class="pr-2">Encuentranos</span>
+          <a href="#restaurant" v-smooth-scroll class="pr-2">Encuentranos</a>
           <img src="@/assets/img/icons/arrow.svg" />
         </a>
       </div>
@@ -51,7 +51,7 @@ export default {
 .burger {
   position: absolute;
   right: 10vw;
-  top: 45%;
+  top: 25%;
   transform: translate(-10%, -55%);
 }
 .svg {

@@ -5,7 +5,7 @@
       <div class="title">
         <div
           class="font-title text-5xl leading-tight animation flex justify-center"
-          v-show="getScroll > getHeight && getScroll < getHeight *3"
+          v-show="getScroll > getHeight"
         >
           <div class="child">Estamos para ti</div>
         </div>

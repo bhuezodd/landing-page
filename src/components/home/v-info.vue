@@ -3,11 +3,8 @@
     <div class="w-4/12">
       <img src="@/assets/img/images/movil.png" class="phone" />
     </div>
-    <div class="w-5/12 p-16">
-      <div
-        class="w-10/12 text-center animation"
-        v-show="getScroll > getHeight * 4 && getScroll < getHeight * 6"
-      >
+    <div class="w-5/12 p-16" v-show="getScroll > getHeight * 3.6">
+      <div class="w-10/12 text-center animation">
         <p class="child font-title text-4xl">Obten más beneficios</p>
         <p class="child font-title text-4xl text-3xl bg-yellow">Descarga nuestra App</p>
       </div>

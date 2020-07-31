@@ -17,11 +17,13 @@ const nameComponents = [
       'GoogleMapLoader',
       'GoogleMapMarker',
       'card-app',
-      'v-icon'
+      'v-icon',
+      'card-menu',
+      'loading'
     ]
   },
   {
-    url: 'landings',
+    url: 'home',
     childrens: [
       'v-header',
       'v-about',
@@ -30,6 +32,13 @@ const nameComponents = [
       'v-contact',
       'v-info',
       'v-footer',
+    ]
+  },
+  {
+    url: 'menu',
+    childrens: [
+      'm-header',
+      'm-menu',
     ]
   }
 ]

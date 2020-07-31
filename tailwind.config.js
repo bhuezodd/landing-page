@@ -49,8 +49,12 @@ module.exports = {
       fontSize: {
         'title': '90px',
         'title-2': '75px',
+        'title-3': '70px',
         'sub-text': '24.5px'
       },
+      height: {
+        's/2': '70vh'
+      }
     },
   },
   variants: {
@@ -80,6 +84,34 @@ module.exports = {
           '&:hover': {
             backgroundColor: '#666'
           },
+        },
+      }
+
+      addComponents(buttons)
+    }),
+    plugin(function ({ addComponents }) {
+      const buttons = {
+        '.btn-pag': {
+          fontFamily: "Syne",
+          width: '20px',
+          height: '20px',
+          borderRadius: '5px',
+          fontSize: "18px",
+          fontWeight: '600',
+          padding: "1.5rem",
+          backgroundColor: '#fff',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          color: '#000',
+          '&:hover': {
+            backgroundColor: '#000',
+            color: '#FFD600',
+          },
+        },
+        '.active': {
+          backgroundColor: '#000',
+          color: '#FFD600',
         },
       }
 
