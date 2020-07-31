@@ -5,7 +5,7 @@
       <div class="title move-title p-3">
         <div
           class="font-title text-4xl leading-tight animation uppercase"
-          v-show="$route.hash == '#about' || getScroll > getHeight / 2 && getScroll < getHeight * 2"
+          v-show="getScroll > getHeight / 2 && getScroll < getHeight * 2"
         >
           <div class="child text-white">La comida es</div>
           <div class="child text-yellow">nuestro Arte</div>

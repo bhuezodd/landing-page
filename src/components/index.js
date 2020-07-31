@@ -9,7 +9,7 @@ const nameComponents = [
   {
     url: 'components',
     childrens: [
-      'navbar', 'badge', 'burger', 'svg-top', 'img-one', 'line-twist'
+      'navbar', 'badge', 'burger', 'svg-top', 'img-one', 'line-twist', 'card-location', 'google-components', 'GoogleMapLine', 'GoogleMapLoader', 'GoogleMapMarker'
     ]
   },
   {

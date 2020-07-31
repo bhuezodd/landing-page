@@ -5,7 +5,7 @@
       <div class="title xl:w-5/12 lg:w-5/12 md::w-7/12 sm:w-full">
         <div
           class="font-title text-title leading-tight animation"
-          v-show="$route.hash == '#top'  || $route.hash == '' || getScroll < getHeight -100"
+          v-show="$route.hash == '' || getScroll < getHeight -100"
         >
           <div class="child">Un nuevo sabor esta en</div>
           <div class="child bg-yellow lg:w-8/12">la ciudad</div>
@@ -19,10 +19,7 @@
         </a>
       </div>
       <!-- burger -->
-      <div
-        v-show="$route.hash == '#top'  || $route.hash == '' || getScroll < getHeight -100"
-        class="burger animation"
-      >
+      <div v-show=" getScroll < getHeight -100" class="burger animation">
         <div class="obj">
           <burger />
         </div>
