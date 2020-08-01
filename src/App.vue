@@ -1,10 +1,17 @@
 <template>
   <div id="app">
-    <navbar></navbar>
+    <navbar @open="show = true"></navbar>
+    <sidebar @close="show = false" :show="show" />
     <router-view />
     <v-footer />
   </div>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      show: false,
+    };
+  },
+};
 </script>

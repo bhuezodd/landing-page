@@ -1,23 +1,26 @@
 <template>
-  <div class="h-screen pt-24 relative">
+  <div class="xl:h-screen h-s/6 pt-24 relative">
     <div class="w-full h-full flex justify-between items-center">
       <div class="absolute w-full flex justify-center">
         <carousel :per-page="1" :autoplay="true">
           <slide v-for="item in testimonials" :key="item.title">
             <div class="w-full text-center">
               <div class="w-full flex justify-center">
-                <p class="font-title w-1/2 text-3xl">"{{item.title}}"</p>
+                <p class="font-title md:w-1/2 w-full md:text-3xl text-xl">"{{item.title}}"</p>
               </div>
               <div class="w-full flex justify-center">
-                <p class="font-sans w-4/12 text-gray-100">{{item.footer}}</p>
+                <p class="font-sans md:w-4/12 w-full text-gray-100">{{item.footer}}</p>
               </div>
             </div>
           </slide>
         </carousel>
       </div>
-      <img src="@/assets/img/svgs/sauce.svg" class="h-full relative" />
-      <img src="@/assets/img/svgs/sauce.svg" class="rotate-suace h-full mt-32 relative" />
-      <img src="@/assets/img/images/ketchup.png" class="tomato" />
+      <img src="@/assets/img/svgs/sauce.svg" class="xl:h-full h-5/12 relative md:block hidden" />
+      <img
+        src="@/assets/img/svgs/sauce.svg"
+        class="rotate-suace xl:h-full h-5/12 mt-32 relative md:block hidden"
+      />
+      <img src="@/assets/img/images/ketchup.png" class="tomato xl:block hidden" />
     </div>
   </div>
 </template>
@@ -48,13 +51,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.rotate-suace {
-  transform: rotate(180deg);
-}
-.tomato {
-  position: absolute;
-  width: 30%;
-  top: 4rem;
-  right: 0;
-}
 </style>

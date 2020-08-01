@@ -47,13 +47,19 @@ module.exports = {
     },
     extend: {
       fontSize: {
-        'title': '90px',
+        'title': '80px',
         'title-2': '75px',
         'title-3': '70px',
+        'title-4': '60px',
+        'title-5': '50px',
         'sub-text': '24.5px'
       },
       height: {
-        's/2': '70vh'
+        's/9': '90vh',
+        's/7': '70vh',
+        's/6': '70vh',
+        's/5': '50vh',
+        's/3': '30vh',
       }
     },
   },
@@ -65,9 +71,7 @@ module.exports = {
         '.btn': {
           fontFamily: "Syne",
           width: '50%',
-          fontSize: "22px",
           fontWeight: '600',
-          padding: "2rem",
           backgroundColor: '#fff',
           display: 'flex',
           justifyContent: 'center',
@@ -108,10 +112,10 @@ module.exports = {
             backgroundColor: '#000',
             color: '#FFD600',
           },
-        },
-        '.active': {
-          backgroundColor: '#000',
-          color: '#FFD600',
+          '&.active': {
+            backgroundColor: '#000',
+            color: '#FFD600',
+          },
         },
       }
 

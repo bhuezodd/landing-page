@@ -1,23 +1,31 @@
 <template>
-  <div class="h-screen p-32 flex">
-    <div class="relative w-6/12">
+  <div class="md:px-16 md:pt-16 flex flex-wrap">
+    <div class="xl:w-6/12 w-full">
       <!-- Title -->
       <div class="title">
         <div
-          class="font-title text-5xl leading-tight animation flex justify-center"
-          v-show="getScroll > getHeight"
+          class="font-title text-5xl leading-tight flex justify-center"
+          :class="getScroll > getHeight / 2 ? 'animation' : 'not-animation'"
         >
           <div class="child">Estamos para ti</div>
         </div>
       </div>
       <div class="flex flex-wrap">
         <div class="w-full mt-4 flex">
-          <div class="btn border active">
-            <v-icon icon="takeaway" color="white" />
+          <div
+            class="btn md:text-2xl text-md border md:p-4 py-2"
+            :class="state != 'delivery' ? 'active' : ''"
+            @click="getLocation('takeaway')"
+          >
+            <v-icon icon="takeaway" :color="state != 'delivery' ? 'white' : 'black'" />
             <span class="px-2">Para llevar</span>
           </div>
-          <div class="btn border">
-            <v-icon icon="delivery" color="black" />
+          <div
+            class="btn md:text-2xl text-md border md:p-4 py-2"
+            :class="state == 'delivery' ? 'active' : ''"
+            @click="getLocation('delivery')"
+          >
+            <v-icon icon="delivery" :color="state == 'delivery' ? 'white' : 'black'" />
             <span class="px-2">Domicilio</span>
           </div>
         </div>
@@ -26,7 +34,7 @@
           <input
             type="text"
             class="w-8/12 h-full font-sans text-xl px-2 focus:outline-none"
-            v-model="search"
+            @input="searchData"
             placeholder="Buscar nombre o dirección"
           />
         </div>
@@ -34,58 +42,62 @@
           <card-location
             :active="select == item.id ? true : false"
             @click="selectLocation"
-            v-for="item in items"
+            v-for="item in getLocations"
             :key="item.id"
             :item="item"
           ></card-location>
         </div>
       </div>
     </div>
-    <div class="w-6/12">
+    <div class="xl:w-6/12 xl:h-screen h-s/5 w-full md:block hidden" v-if="!isLoading">
       <google-components class="h-full w-full"></google-components>
     </div>
   </div>
 </template>
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   props: ["text"],
   data() {
     return {
-      key: process.env.APIKEY,
+      isLoading: false,
       search: "",
       select: 0,
-      items: [
-        {
-          id: 1,
-          name: "Sucursal 75 Avenida",
-          opening_time: "10:00:00",
-          closing_time: "20:00:00",
-          address: "Avenida Jerusalen 0006, San Salvador.",
-          latitude: "13.710566",
-          longitude: "-89.231635",
-          type: "takeaway",
-        },
-        {
-          id: 2,
-          name: "Sucursal 75 Avenida",
-          opening_time: "10:00:00",
-          closing_time: "20:00:00",
-          address: "Avenida Jerusalen 0006, San Salvador.",
-          latitude: "13.710566",
-          longitude: "-89.231635",
-          type: "takeaway",
-        },
-      ],
+      state: true,
     };
+  },
+  mounted() {
+    this.getLocation("takeaway");
   },
   computed: {
     ...mapGetters("general", ["getScroll", "getHeight"]),
+    ...mapGetters("locations", ["getLocations"]),
   },
   methods: {
-    selectLocation(item) {
+    ...mapActions("locations", [
+      "setLocation",
+      "fetchLocation",
+      "fetchLocationQuery",
+    ]),
+    async selectLocation(item) {
+      this.isLoading = true;
       this.select = item.id;
+      await this.setLocation({
+        lat: parseFloat(item.latitude),
+        lng: parseFloat(item.longitude),
+      });
+      this.isLoading = false;
+    },
+    async getLocation(type) {
+      this.state = type;
+      await this.fetchLocation(type);
+    },
+    async searchData({ target }) {
+      await this.fetchLocationQuery({
+        type: this.state,
+        query: target.value,
+      });
     },
   },
 };

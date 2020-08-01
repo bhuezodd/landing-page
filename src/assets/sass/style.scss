@@ -42,10 +42,13 @@ color: $colors !important;
   }
 }
 
+.rotate-suace {
+  transform: rotate(180deg);
+}
 
 // And from the left
-.slide:hover,
-.slide:focus {
+.slide:hover:enabled,
+.slide:focus:enabled {
   box-shadow: inset 20em 0 0 0 $colors;
 }
 
@@ -60,18 +63,28 @@ color: $colors !important;
   color: $colors;
   transition: 0.5s;
   border-radius:5px;
-  
-  &:hover,
-  &:focus { 
+  &:disabled {
+    background: #999;
+    color: #000;
+  }
+  &:hover:enabled,
+  &:focus:enabled { 
     border-color: $colors;
     color: #000;
     outline: none;
   }
 }
 
-
+.move-title {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
 // Animation text
- .animation-text {
+.not-animation {
+  opacity: 0;
+}
+.animation-text {
    transform: translateY(100px);
    animation: 1.2s slideIn ease-in-out forwards 0.2s;
    z-index: 10;
@@ -106,6 +119,23 @@ color: $colors !important;
         mix-blend-mode: screen;
     }
   }
+  .animation-left {
+    transform: translateX(-100px);
+    animation: 1.2s slideIn ease-in-out forwards 0.2s;
+    z-index: 10;
+    opacity: 0;
+    position: relative;
+  
+    &::before {
+        content: '';
+        width: 0%;
+        height: 76px;
+        position: absolute;
+        bottom: -10px;
+        animation: 1s underline ease-in-out forwards 0.4s;
+        mix-blend-mode: screen;
+    }
+  }
 
 @keyframes skewBg {
   0% {
@@ -121,7 +151,6 @@ color: $colors !important;
     width: 100%;
   }
 }
-
 @keyframes slideOn {
   100% {
     transform: translateX(0px);
@@ -134,4 +163,119 @@ color: $colors !important;
     transform: translateY(0px);
     opacity: 1;
   }
+}
+// Burger
+  .burger {
+    width:70%;
+    margin: 0 !important;
+  }
+  .line-twist {
+    position: absolute;
+    width: 100%;
+  }
+.svg {
+  position: absolute;
+  right: 0;
+  top: 45%;
+  transform: translate(0, -55%);
+  z-index: -2;
+}
+.color-last  {
+ 
+  &::before {
+      content: '';
+      width: 100px;
+      height: 85px;
+      background: $colors;
+      position: absolute;
+      bottom: -10px;
+      animation: 1s lineColor ease-in-out forwards 0.4s;
+      mix-blend-mode: screen;
+      z-index: -1;
+  }
+}
+@keyframes lineColor {
+  100% {
+    width: 60%;
+  }
+}
+.tomato {
+  position: absolute;
+  width: 30%;
+  top: 4rem;
+  right: 0;
+}
+.phone {
+  position: absolute;
+  top: -15%;
+  left: -5%;
+}
+@media only screen and (max-width: 640px) {
+  .svg {
+    position: absolute;
+    width: 100%;
+    right: -8vw;
+    top: -13vh;
+    transform: translate(0%, 0);
+    z-index: -1;
+  }
+  .burger {
+    width:80%;
+  }
+  .color-last::before {
+      height: 45px;
+  }
+  @keyframes lineColor {
+    100% {
+      width: 70%;
+    }
+  }
+  .phone {
+    position: absolute;;
+    top: -10%;
+    left: -5%;
+  }
+}
+@media only screen and (min-width: 640px ) and (max-width: 768px) {
+  .svg {
+    position: absolute;
+    width: 70%;
+    right: -15%;
+    top: -5vh;
+    transform: translate(0%, 0);
+    z-index: -1;
+  }
+  @keyframes lineColor {
+    100% {
+      width: 100%;
+    }
+  }
+  .burger {
+    width:70%;
+  }
+  .phone {
+    position: absolute;;
+    top: -10%;
+    left: -5%;
+  }
+}
+@media only screen and (min-width: 768px ) and (max-width: 1024px) {
+  .svg {
+    position: absolute;
+    right: -15%;
+    top: -5vh;
+    transform: translate(0%, 0);
+  }
+  @keyframes lineColor {
+    100% {
+      width: 100%;
+    }
+  }
+  .color-last::before {
+      height: 55px;
+  }
+  .burger {
+    width:100%;
+  }
+  
 }

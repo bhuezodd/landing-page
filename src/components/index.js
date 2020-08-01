@@ -10,6 +10,7 @@ const nameComponents = [
     url: 'components',
     childrens: [
       'navbar',
+      'sidebar',
       'badge',
       'card-location',
       'google-components',

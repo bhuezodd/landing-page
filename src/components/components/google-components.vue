@@ -1,6 +1,5 @@
 <template>
-  <div></div>
-  <!-- <GoogleMapLoader :mapConfig="mapConfig">
+  <GoogleMapLoader :mapConfig="mapConfig" :apiKey="key">
     // insert your google maps api key to render styled map
     <template slot-scope="{ google, map }">
       <GoogleMapMarker
@@ -10,65 +9,47 @@
         :google="google"
         :map="map"
       />
-      <GoogleMapLine
-        v-for="line in lines"
-        :key="line.id"
-        :path.sync="line.path"
-        :google="google"
-        :map="map"
-      />
     </template>
-  </GoogleMapLoader>-->
+  </GoogleMapLoader>
 </template>
 <script>
-import { mapSettings } from "@/constants/mapSettings";
+import { mapGetters } from "vuex";
 
 export default {
   data() {
     return {
+      key: "",
       markers: [
         {
-          id: "a",
-          position: { lat: 3, lng: 101 },
-        },
-        {
-          id: "b",
-          position: { lat: 5, lng: 99 },
-        },
-        {
-          id: "c",
-          position: { lat: 6, lng: 97 },
-        },
-      ],
-      lines: [
-        {
           id: "1",
-          path: [
-            { lat: 3, lng: 101 },
-            { lat: 5, lng: 99 },
-          ],
-        },
-        {
-          id: "2",
-          path: [
-            { lat: 5, lng: 99 },
-            { lat: 6, lng: 97 },
-          ],
+          position: { lat: 13.710566, lng: -89.231635 },
         },
       ],
     };
   },
-
+  mounted() {
+    this.key = process.env.VUE_APP_API_KEY;
+  },
   computed: {
+    ...mapGetters("locations", ["getLocation"]),
     mapConfig() {
       return {
-        ...mapSettings,
+        zoom: 20,
+        mapTypeId: "roadmap",
         center: this.mapCenter,
+        zoomControl: true,
+        mapTypeControl: false,
+        scaleControl: false,
+        streetViewControl: false,
+        rotateControl: false,
+        fullscreenControl: true,
+        disableDefaultUi: true,
       };
     },
 
     mapCenter() {
-      return this.markers[1].position;
+      this.markers[0].position = this.getLocation;
+      return this.markers[0].position;
     },
   },
 };

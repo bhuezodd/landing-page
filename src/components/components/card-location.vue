@@ -4,9 +4,9 @@
     :class="active ? 'bg-beige' : 'border border-black'"
     @click="$emit('click',item)"
   >
-    <section class="font-syne text-3xl font-bold">{{ item.name }}</section>
-    <section class="font-sans text-xl">Abierto de {{ open }}- {{ close }}</section>
-    <section class="font-sans text-xl">{{ item.address }}</section>
+    <section class="font-syne md:text-3xl text-xl font-bold">{{ item.name }}</section>
+    <section class="font-sans md:text-xl text-sm">Abierto de {{ open }}- {{ close }}</section>
+    <section class="font-sans md:text-xl text-sm">{{ item.address }}</section>
   </div>
 </template>
 <script>
