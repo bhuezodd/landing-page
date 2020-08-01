@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full xl:h-auto lg:h-s/7 h-s/9 bg-black text-white md:py-32 overflow-hidden">
+  <div class="w-full xl:h-auto lg:h-s/7 h-screen bg-black text-white md:py-32 overflow-hidden">
     <div class="flex flex-wrap w-full h-full py-32 justify-center" v-if="state">
       <div class="w-full flex justify-center py-2">
         <img src="@/assets/img/svgs/mail-send.svg" alt />
