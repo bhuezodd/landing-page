@@ -1,19 +1,27 @@
 # Foodies
 
-## Project setup
+## Colocar variables de entorno
+
+```
+/* .env */
+VUE_APP_API_URL= // URL de api
+VUE_APP_API_KEY= // API KEY de google maps, sino no posee esto no evita que se vea el mapa
+```
+
+## Instalación de dependencias
+
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Compilación y "hot-reloads" para desarrollo
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Compilación para producción
 ```
 yarn build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+

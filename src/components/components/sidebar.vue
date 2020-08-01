@@ -35,7 +35,7 @@
     </div>
     <div class="py-4">
       <a
-        @click="$router.push('/menu')"
+        @click="$router.push('/menu'),close()"
         href="#menu"
         v-smooth-scroll
         class="text-2xl"

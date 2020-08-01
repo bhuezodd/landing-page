@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="w-screen overflow-x-hidden">
     <section id="top">
       <v-header></v-header>
     </section>

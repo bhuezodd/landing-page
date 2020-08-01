@@ -1,5 +1,7 @@
 <template>
-  <div class="w-full xl:h-auto lg:h-s/7 h-screen bg-black text-white md:py-32 overflow-hidden">
+  <div
+    class="w-full xl:h-auto lg:h-s/7 h-screen bg-black text-white md:py-32 pb-32 pt-5 overflow-hidden"
+  >
     <div class="flex flex-wrap w-full h-full py-32 justify-center" v-if="state">
       <div class="w-full flex justify-center py-2">
         <img src="@/assets/img/svgs/mail-send.svg" alt />
@@ -24,7 +26,7 @@
         class="w-7/12 text-center"
         :class="getScroll > getHeight *2 ? 'animation' : 'not-animation'"
       >
-        <p class="child font-title xl:text-4xl md:text-3xl">Cuentanos tu experiencia</p>
+        <p class="child font-title xl:text-4xl text-xl md:text-3xl">Cuentanos tu experiencia</p>
         <p
           class="child font-sans xl:text-3xl md:text-xl"
         >Don't miss out on our great offers & Receive deals from all our top restaurants via e-mail.</p>
