@@ -225,6 +225,7 @@ color: $colors !important;
   top: -15%;
   left: -5%;
 }
+// SM
 @media only screen and (max-width: 640px) {
   .svg {
     position: absolute;
@@ -261,6 +262,7 @@ color: $colors !important;
     left: -5%;
   }
 }
+// MD
 @media only screen and (min-width: 640px ) and (max-width: 768px) {
   .svg {
     position: absolute;
@@ -287,6 +289,7 @@ color: $colors !important;
     left: -5%;
   }
 }
+// LG
 @media only screen and (min-width: 768px ) and (max-width: 1024px) {
   .svg {
     position: absolute;

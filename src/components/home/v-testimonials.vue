@@ -53,7 +53,7 @@ export default {
             "Invitamos a mi padre a comer por su cumpleaños ¡Vaya que lo disfruto! Cada semana nos reunimos para ir a comer a foodies",
         },
         {
-          title: "El mejor lugar para degustar en familia y amigos!",
+          title: "El mejor lugar para disfrutar en familia y amigos!",
           footer:
             "Es el mejor lugar al que he venido con mi familia, la comida es rica, sirven rápido y te atienden de la mejor manera.",
         },
