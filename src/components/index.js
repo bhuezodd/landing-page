@@ -9,20 +9,19 @@ const nameComponents = [
   {
     url: 'components',
     childrens: [
-      'navbar',
-      'sidebar',
-      'badge',
-      'card-location',
-      'google-components',
-      'GoogleMapLine',
-      'GoogleMapLoader',
-      'GoogleMapMarker',
-      'card-app',
+      'v-navbar',
+      'v-sidebar',
+      'v-badge',
+      'v-card-location',
+      'v-google-components',
+      'v-google-map-loader',
+      'v-google-map-marker',
+      'v-card-app',
       'v-icon',
-      'card-menu',
-      'loading',
-      'v-menu',
-      'filters'
+      'v-card-menu',
+      'v-loading',
+      'v-icon-menu',
+      'v-filters'
     ]
   },
   {
@@ -40,8 +39,8 @@ const nameComponents = [
   {
     url: 'menu',
     childrens: [
-      'm-header',
-      'm-menu',
+      'v-menu-header',
+      'v-menu',
     ]
   }
 ]

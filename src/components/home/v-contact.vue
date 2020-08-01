@@ -24,7 +24,7 @@
     <div class="md:px-16 px-2 w-full text-center flex flex-wrap justify-center" v-if="!state">
       <div
         class="w-7/12 text-center"
-        :class="getScroll > getHeight *2 ? 'animation' : 'not-animation'"
+        :class="getScroll > getHeight *2.5 ? 'animation' : 'not-animation'"
       >
         <p class="child font-title xl:text-4xl text-xl md:text-3xl">Cuentanos tu experiencia</p>
         <p

@@ -1,7 +1,10 @@
 <template>
-  <div id="app">
-    <navbar @open="show = true"></navbar>
-    <sidebar @close="show = false" :show="show" />
+  <div>
+    <!-- Navbar -->
+    <v-navbar @open="show = true"></v-navbar>
+    <!-- Sidebar -->
+    <v-sidebar @close="show = false" :show="show" />
+    <!-- Vista -->
     <router-view />
     <v-footer />
   </div>

@@ -1,12 +1,12 @@
 <template>
   <div>
     <div id="menu">
-      <filters @close="show= false" :show="show" />
+      <v-filters @close="show= false" :show="show" />
     </div>
     <div id="products">
-      <m-header></m-header>
+      <v-menu-header></v-menu-header>
     </div>
-    <m-menu @open="show = true"></m-menu>
+    <v-menu @open="show = true"></v-menu>
   </div>
 </template>
 <script>

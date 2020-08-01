@@ -11,7 +11,7 @@
   src: url("//db.onlinewebfonts.com/t/3724259186746d86859fbb0fde0fa44a.woff2")
     format("woff2");
 }
-
+// Color primary
 $colors: #FFD600;
 .control-group{
 color: #ffffff !important;
@@ -177,6 +177,7 @@ color: $colors !important;
     position: absolute;
     width: 100%;
   }
+  // svgs yellow
 .svg {
   position: absolute;
   right: 0;
@@ -191,6 +192,7 @@ color: $colors !important;
     z-index: 0;
   }
 }
+// Line color yellow on title
 .color-last  {
  
   &::before {
@@ -210,12 +212,14 @@ color: $colors !important;
     width: 60%;
   }
 }
+// img ketchup
 .tomato {
   position: absolute;
   width: 30%;
   top: 4rem;
   right: 0;
 }
+// img phone
 .phone {
   position: absolute;
   top: -15%;
@@ -248,6 +252,9 @@ color: $colors !important;
       width: 70%;
     }
   }
+  .home {
+    overflow-x: hidden;
+  }
   .phone {
     position: absolute;;
     top: -10%;
@@ -267,6 +274,9 @@ color: $colors !important;
     100% {
       width: 100%;
     }
+  }
+  .home {
+    overflow-x: hidden;
   }
   .burger {
     width:70%;

@@ -9,12 +9,12 @@
       <div class="w-full">
         <p
           class="font-title text-xl"
-          :class="getScroll > getHeight * 3 ? 'animation-text' : 'not-animation'"
+          :class="getScroll > getHeight * 4 ? 'animation-text' : 'not-animation'"
         >{{ item.title }}</p>
       </div>
       <div class="xl:w-10/12 md:w-8/12 w-1/2">
         <p
-          :class="getScroll > getHeight * 3 ? 'animation-text' : 'not-animation'"
+          :class="getScroll > getHeight * 4 ? 'animation-text' : 'not-animation'"
         >{{ item.description }}</p>
       </div>
     </div>

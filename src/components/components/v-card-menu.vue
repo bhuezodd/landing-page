@@ -12,7 +12,7 @@
       </div>
       <div class="w-full flex justify-between items-center font-sans">
         <span class="text-gray-200">{{ item.category }}</span>
-        <badge :text="`$${item.price}`" />
+        <v-badge :text="`$${item.price}`" />
       </div>
     </div>
   </div>

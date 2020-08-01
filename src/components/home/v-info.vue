@@ -8,14 +8,14 @@
     >
       <div
         class="xl:w-10/12 w-full text-center"
-        :class="getScroll > getHeight *3 ? 'animation-left' : 'not-animation'"
+        :class="getScroll > getHeight *4 ? 'animation-left' : 'not-animation'"
       >
         <p class="child font-title text-3xl">Obten más beneficios</p>
         <span class="child font-title text-3xl text-3xl bg-yellow">Descarga nuestra App</span>
       </div>
       <div class="relative mt-8 flex flex-wrap justify-center items-center py-5">
         <div class="flex w-full top-0 flex-wrap justify-center">
-          <card-app v-for="item in paragraphs" :key="item.id" :item="item" />
+          <v-card-app v-for="item in paragraphs" :key="item.id" :item="item" />
         </div>
         <div class="absolute w-9/12 justify-between top-0 mt-10 md:flex hidden">
           <img src="@/assets/img/svgs/arrow.svg" alt />

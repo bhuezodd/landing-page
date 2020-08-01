@@ -34,7 +34,7 @@
       class="xl:mr-16 lg:mr-10 lg:text-2xl lg:block hidden link-hover"
     >Contáctanos</a>
     <div class="lg:hidden block">
-      <v-menu
+      <v-icon-menu
         @click="$emit('open')"
         icon="menu"
         :color="$route.path == '/menu' ? 'white' : 'black'"

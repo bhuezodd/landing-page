@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from "vuex";
+// Modulos
 import contactModule from "./contact";
 import locationsModule from "./locations";
 import menuModule from "./menus";

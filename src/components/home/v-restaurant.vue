@@ -5,7 +5,7 @@
       <div class="title">
         <div
           class="font-title text-5xl leading-tight flex justify-center"
-          :class="getScroll > getHeight / 2 ? 'animation' : 'not-animation'"
+          :class="getScroll > getHeight /2 ? 'animation' : 'not-animation'"
         >
           <div class="child">Estamos para ti</div>
         </div>
@@ -39,18 +39,18 @@
           />
         </div>
         <div class="w-full max-h-full px-16">
-          <card-location
+          <v-card-location
             :active="select == item.id ? true : false"
             @click="selectLocation"
             v-for="item in getLocations"
             :key="item.id"
             :item="item"
-          ></card-location>
+          ></v-card-location>
         </div>
       </div>
     </div>
     <div class="xl:w-6/12 xl:h-screen h-s/5 w-full md:block hidden" v-if="!isLoading">
-      <google-components class="h-full w-full"></google-components>
+      <v-google-components class="h-full w-full"></v-google-components>
     </div>
   </div>
 </template>

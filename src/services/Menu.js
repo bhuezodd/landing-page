@@ -1,24 +1,24 @@
-import API from './core/API'
+import Http from './core/Http'
 
 export default {
     async fetchMenuAPI() {
-        let data = await API.get('/menu')
+        let data = await Http.get('/menu')
         if (data.status == 200) return data
     },
     async fetchMenuForCategoryAPI(cate) {
-        let data = await API.get(`/menu?category=${cate}`)
+        let data = await Http.get(`/menu?category=${cate}`)
         if (data.status == 200) return data
     },
     async fetchMenuForQueryAPI(cate) {
-        let data = await API.get(`/menu?query=${cate}`)
+        let data = await Http.get(`/menu?query=${cate}`)
         if (data.status == 200) return data
     },
     async paginationMenuAPI(num) {
-        let data = await API.get(`/menu?page=${num}`)
+        let data = await Http.get(`/menu?page=${num}`)
         if (data.status == 200) return data
     },
     async fetchCategoryAPI() {
-        let data = await API.get('/categories')
+        let data = await Http.get('/categories')
         if (data.status == 200) return data
     },
 }

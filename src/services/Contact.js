@@ -1,8 +1,8 @@
-import API from './core/API'
+import Http from './core/Http'
 
 export default {
     async sendEmailAPI(datos) {
-        let data = await API.post(`/contact`, datos)
+        let data = await Http.post(`/contact`, datos)
         if (data.status == 200) return true
 
         return false

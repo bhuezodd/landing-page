@@ -12,7 +12,11 @@
         href="#top"
       >Foodies</a>
       <div class="lg:hidden block">
-        <v-menu @click="close()" icon="x" :color=" $route.path == '/menu' ? 'white' : 'black'" />
+        <v-icon-menu
+          @click="close()"
+          icon="x"
+          :color=" $route.path == '/menu' ? 'white' : 'black'"
+        />
       </div>
     </div>
     <div class="py-4">

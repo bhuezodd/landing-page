@@ -9,7 +9,7 @@
         href="#top"
       >Foodies</a>
       <div class="lg:hidden block">
-        <v-menu @click="close(null)" icon="x" color="white" />
+        <v-icon-menu @click="close(null)" icon="x" color="white" />
       </div>
     </div>
     <div class="py-4">

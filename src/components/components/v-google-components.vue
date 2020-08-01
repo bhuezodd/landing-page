@@ -1,8 +1,8 @@
 <template>
-  <GoogleMapLoader :mapConfig="mapConfig" :apiKey="key">
+  <v-google-map-loader :mapConfig="mapConfig" :apiKey="key">
     // insert your google maps api key to render styled map
     <template slot-scope="{ google, map }">
-      <GoogleMapMarker
+      <v-google-map-marker
         v-for="marker in markers"
         :key="marker.id"
         :marker="marker"
@@ -10,7 +10,7 @@
         :map="map"
       />
     </template>
-  </GoogleMapLoader>
+  </v-google-map-loader>
 </template>
 <script>
 import { mapGetters } from "vuex";

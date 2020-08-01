@@ -29,7 +29,7 @@
       <div v-if="menu.data.length > 0">
         <div class="w-full flex flex-wrap mt-8">
           <div class="xl:w-3/12 md:w-1/2 w-full p-4" v-for="item in menu.data" :key="item.id">
-            <card-menu :item="item"></card-menu>
+            <v-card-menu :item="item"></v-card-menu>
           </div>
         </div>
         <div class="flex flex-wrap justify-center font-bold font-sans">
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div v-else class="flex flex-wrap justify-center p-32">
-      <loading />
+      <v-loading />
     </div>
   </div>
 </template>
