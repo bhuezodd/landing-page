@@ -5,7 +5,7 @@
       <div class="absolute bottom-0 right-0 md:pr-6 pr-2 md:pb-16 pb-8">
         <div
           class="font-title leading-tight md:text-5xl text-4xl text-right uppercase"
-          :class="getScroll > getHeight / 3 ? 'animation' : 'not-animation'"
+          :class="getScroll > getHeight / 4 ? 'animation' : 'not-animation'"
         >
           <p class="child text-white">
             La comida es

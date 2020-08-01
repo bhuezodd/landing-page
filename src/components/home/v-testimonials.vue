@@ -4,7 +4,10 @@
       <div class="absolute w-full flex justify-center">
         <carousel :per-page="1" :autoplay="true">
           <slide v-for="item in testimonials" :key="item.title">
-            <div class="w-full text-center">
+            <div
+              class="w-full text-center"
+              :class="getScroll > getHeight  * 2 ? 'animation-text' : 'not-animation'"
+            >
               <div class="w-full flex justify-center">
                 <p class="font-title md:w-1/2 w-full md:text-3xl text-xl">"{{item.title}}"</p>
               </div>
@@ -26,7 +29,12 @@
 </template>
 <script>
 import { Carousel, Slide } from "vue-carousel";
+import { mapGetters } from "vuex";
+
 export default {
+  computed: {
+    ...mapGetters("general", ["getScroll", "getHeight"]),
+  },
   components: {
     Carousel,
     Slide,
@@ -43,6 +51,11 @@ export default {
           title: "El sitio perfecto para pasarla con tus seres queridos!",
           footer:
             "Invitamos a mi padre a comer por su cumpleaños ¡Vaya que lo disfruto! Cada semana nos reunimos para ir a comer a foodies",
+        },
+        {
+          title: "El mejor lugar para degustar en familia y amigos!",
+          footer:
+            "Es el mejor lugar al que he venido con mi familia, la comida es rica, sirven rápido y te atienden de la mejor manera.",
         },
       ],
     };
