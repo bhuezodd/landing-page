@@ -34,11 +34,10 @@
       class="xl:mr-16 lg:mr-10 lg:text-2xl lg:block hidden link-hover"
     >Contáctanos</a>
     <div class="lg:hidden block">
-      <img
-        src="@/assets/img/icons/menu.svg"
+      <v-menu
         @click="$emit('open')"
-        class="cursor-pointer transform hover:scale-105"
-        alt
+        icon="menu"
+        :color="$route.path == '/menu' ? 'white' : 'black'"
       />
     </div>
   </div>

@@ -168,6 +168,10 @@ color: $colors !important;
   .burger {
     width:70%;
     margin: 0 !important;
+    z-index: 1;
+    &.menu{
+      width:90%;
+    }
   }
   .line-twist {
     position: absolute;
@@ -179,6 +183,13 @@ color: $colors !important;
   top: 45%;
   transform: translate(0, -55%);
   z-index: -2;
+  &.menu {
+    position: absolute;
+    right: -10vw;
+    top: 50%;
+    transform: translate(0, -40%);
+    z-index: 0;
+  }
 }
 .color-last  {
  
@@ -218,6 +229,13 @@ color: $colors !important;
     top: -13vh;
     transform: translate(0%, 0);
     z-index: -1;
+    &.menu {
+      position: absolute;
+      right: -35vw;
+      top: 10%;
+      transform: translate(0, -40%);
+      z-index: 0;
+    }
   }
   .burger {
     width:80%;
@@ -265,6 +283,13 @@ color: $colors !important;
     right: -15%;
     top: -5vh;
     transform: translate(0%, 0);
+    &.menu {
+      position: absolute;
+      right: -35vw;
+      top: 40%;
+      transform: translate(0, -40%);
+      z-index: 0;
+    }
   }
   @keyframes lineColor {
     100% {

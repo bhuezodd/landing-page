@@ -96,7 +96,6 @@ module.exports = {
     plugin(function ({ addComponents }) {
       const buttons = {
         '.btn-pag': {
-          fontFamily: "Syne",
           width: '20px',
           height: '20px',
           borderRadius: '5px',

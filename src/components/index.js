@@ -20,7 +20,9 @@ const nameComponents = [
       'card-app',
       'v-icon',
       'card-menu',
-      'loading'
+      'loading',
+      'v-menu',
+      'filters'
     ]
   },
   {

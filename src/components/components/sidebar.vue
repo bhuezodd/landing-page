@@ -1,7 +1,8 @@
 <template>
   <div
-    class="w-full bg-white mr-5 px-5 py-5 lg:hidden block px-5 fixed z-50 rounded-b-lg"
+    class="w-full mr-5 px-5 py-5 lg:hidden block px-5 fixed z-50 rounded-b-lg"
     v-show="show"
+    :class="[ $route.path == '/menu' ? 'text-white bg-black' : 'text-black bg-white' ]"
   >
     <div class="w-full flex justify-between">
       <a
@@ -11,12 +12,7 @@
         href="#top"
       >Foodies</a>
       <div class="lg:hidden block">
-        <img
-          src="@/assets/img/icons/x.svg"
-          @click="close()"
-          class="cursor-pointer transform hover:scale-105"
-          alt
-        />
+        <v-menu @click="close()" icon="x" :color=" $route.path == '/menu' ? 'white' : 'black'" />
       </div>
     </div>
     <div class="py-4">
@@ -42,7 +38,8 @@
         @click="$router.push('/menu')"
         href="#menu"
         v-smooth-scroll
-        class="xl:mr-16 lg:mr-10 lg:text-2xl lg:block hidden link-hover"
+        class="text-2xl"
+        :class="show ? '' : 'hidden'"
       >Menú</a>
     </div>
     <div class="py-4">

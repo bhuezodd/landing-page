@@ -15,6 +15,34 @@ export default {
       commit("isLoading", false);
     }
   },
+  async fetchMenuForCategory({ commit }, cate) {
+    try {
+      commit("isLoading", true);
+      let { data } = await MenuServices.fetchMenuForCategoryAPI(cate);
+      commit("FETCH_MENU", data);
+      return data
+    } catch (error) {
+      console.log(error);
+    }
+    finally {
+
+      commit("isLoading", false);
+    }
+  },
+  async fetchMenuForQuery({ commit }, cate) {
+    try {
+      commit("isLoading", true);
+      let { data } = await MenuServices.fetchMenuForQueryAPI(cate);
+      commit("FETCH_MENU", data);
+      return data
+    } catch (error) {
+      console.log(error);
+    }
+    finally {
+
+      commit("isLoading", false);
+    }
+  },
   async fetchCategory({ commit }) {
     try {
       commit("isLoading", true);
@@ -28,5 +56,19 @@ export default {
 
       commit("isLoading", false);
     }
-  }
+  },
+  async paginationMenu({ commit }, num) {
+    try {
+      commit("isLoading", true);
+      let { data } = await MenuServices.paginationMenuAPI(num);
+      commit("FETCH_MENU", data);
+      return data
+    } catch (error) {
+      console.log(error);
+    }
+    finally {
+
+      commit("isLoading", false);
+    }
+  },
 }
