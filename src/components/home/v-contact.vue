@@ -114,8 +114,10 @@ export default {
   methods: {
     ...mapActions("contact", ["sendEmail"]),
     async handleContact() {
-      //No funciona API
+      // Error 500 en API
       // this.state = await this.sendEmail(this.email);
+
+      // Simulación de envio de correo
       this.state = true;
     },
   },
